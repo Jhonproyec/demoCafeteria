@@ -1,0 +1,567 @@
+:root{
+	--principal: #D0A177;
+	--secundario: #2D2324;
+	--parrafo: #625449;
+}
+
+/*ESTILOS GENEREALES*/
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+	scroll-behavior: smooth;
+}
+a{
+	text-decoration: none;
+}
+span{
+	color: var(--principal);
+}
+img{
+	width: 100%;
+	object-fit: cover;
+	height: 100%;
+	border-radius: 20px;
+	box-shadow: 0 0 15px 0 rgba(0,0,0,.6)
+}
+.contenedor{
+	max-width: 1100px;
+	margin: 60px auto;
+}
+.encabezado{
+	width: 350px;
+	font-size: 40px;
+	font-weight: 500;
+	border-bottom: 2px solid var(--principal);
+	margin: 50px auto;
+	text-align: center;
+}
+/*ESTILOS MENU DE NAVEGACION*/
+header{
+	width: 100%;
+	height: 70px;
+	position: fixed;
+	z-index: 100;
+	transition: .5s all;
+}
+.contenedorHeader{
+	max-width: 1100px;
+	height: 100%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center
+}
+.logo a{
+	font-size: 20px;
+	color: var(--principal);
+	letter-spacing: 1.5px;
+}
+.menu a{
+	display: inline-block;
+	width: 90px;
+	height: 30px;
+	margin-right: 20px;
+	text-align: center;
+	padding: 5px;
+	color: #fff;
+	font-size: 15px;
+	text-transform: uppercase;
+}
+a:nth-child(4){
+	margin-right: 0
+}
+.menu a:hover{
+	border-bottom: 1px solid var(--principal);
+}
+.activo{
+	border-bottom: 2px solid var(--principal);
+}
+/*ESTILOS CAMBIO DE COLOR AL MENU */
+.cambio{
+	background: #fff;
+	box-shadow: 0 0 10px 0 rgba(0,0,0.5)
+}
+.cambio .menu a{
+	color: #000
+}
+.cambio .menu a:hover{
+	border-bottom: 1px solid var(--principal)
+}
+/*ESTILOS BANNER*/
+.banner{
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	background-image: url('../img/banner.jpg');
+	background-position: center;
+	background-size: cover;
+	background-blend-mode: soft-light;
+	background-color: rgb(0,0,0,.7);
+	background-attachment: fixed;
+}
+.contenidoBanner{
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+}
+.textoBanner{
+	display: block;
+	width: 600px;
+	text-align: center;
+}
+.textoBanner h3{
+	font-size: 40px;
+	font-weight: 300;
+}
+.textoBanner p{
+	font-size: 30px;
+	line-height: 27px
+}
+.textoBanner h2{
+	font-size: 70px;
+	font-weight: 500;
+	text-decoration: underline;
+	letter-spacing: 2px;
+}
+.enlaces{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 50px;
+}
+.enlaces a{
+	width: 200px;
+	height: 35px;
+	padding: 5px;
+	border-radius: 10px;
+	font-size: 18px;
+	transition: .5s all;
+	border: 1px solid var(--principal);
+	color: var(--principal);
+	letter-spacing: 1px;
+}
+.enlaces .vermenu{
+	background-color: var(--principal);
+	color: #fff;
+}
+.whatsapp{
+	position: fixed;
+	bottom: 35px;
+	width: 45px;
+	height: 45px;
+	right: 20px;
+	transition: .5s all;
+	z-index: 100
+}
+.whatsapp img{
+	box-shadow: none;
+	transform: rotateX('100%');
+}
+.whatsapp:hover{
+	width: 50px;
+	height: 50px;
+}
+/*ESTILOS SECCION NOSOTROS*/
+.contenidoNosotros{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.contenidoNosotros .imagen{
+	width: 40%;
+	height: 300px;
+}
+.contenidoNosotros .textoNosotros{
+	width: 50%;
+	margin-top: 10px;
+	letter-spacing: 1px
+}
+.textoNosotros p{
+	font-size: 16px;
+	color: var(--parrafo)
+}
+/*ESTILOS SECCION MENU*/
+.nuestroMenu{
+	width: 100%;
+	height: 520px;
+	background-color: var(--secundario);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	overflow: hidden;
+}
+.nuestroMenu .encabezado{
+	margin-top: 20px;
+	color: #fff;
+}
+.nuestroMenu .imagenMenu{
+	width: 40%;
+}
+.imagenMenu img{
+	border-radius: 0px;
+}
+.nuestroMenu .textoMenu{
+	width: 60%;
+}
+.contenidoMenu{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.contenidoMenu ul{
+	width: 35%;
+	margin-bottom: 35px;
+	margin-left: 0px
+}
+.contenidoMenu ul li{
+	list-style: none;
+	margin-left: 15px;
+	color: var(--principal);
+	margin-bottom: 5px;
+}
+.contenidoMenu .tituloMenu{
+	color: #fff;
+	margin-left: 0;
+	margin-bottom: 10px;
+	font-size: 18px;
+}
+.textoMenu p{
+	display: block;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	margin-top: 5px;
+}
+/*ESTILOS ESPECIALIDADES*/
+.especialidad{
+	margin-bottom: 80px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.phone{
+	display: none
+}
+.especialidad .espimagen{
+	width: 40%;
+	height: 300px;
+}
+.especialidad .textoesp{
+	width: 45%;
+	margin-left: 30px;
+}
+.textoesp h3{
+	font-size: 25px;
+	font-weight: 400
+}
+.textoesp p{
+	font-size: 18px;
+	letter-spacing: 1px;
+	color: var(--parrafo);
+	margin-top: 15px;
+}
+/*ESTILOS SECCION QUE DICEN NUESTROS CLIENTES*/
+.nuestrosClientes{
+	width: 100%;
+	height: 450px;
+	background-image: url('../img/clientes.png');
+	background-size: cover;
+	background-position: center;
+	background-blend-mode: soft-light;
+	background-color: rgb(0,0,0,.6);
+	background-attachment: fixed;
+}
+.nuestrosClientes .encabezado{
+	padding-top: 30px;
+	color: #fff;
+}
+.tarjetas{
+	max-width: 65%;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	color: #fff;
+}
+.tarjeta{
+	width: 30%;
+	height: 250px;
+	border: 2px solid var(--principal);
+	border-radius: 10px;
+	padding: 15px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 300;
+	position: relative;
+}
+.tarjeta h4{
+	position: absolute;
+	bottom: 10px;
+	right: 10px
+}
+/*ESTILOS VISITANOS */
+.mapa{
+	width: 100%;
+	height: 450px;
+}
+.mapa img{
+	box-shadow: none;
+	border-radius: 0;
+}
+/*ESTILOS CONTACTO Y PIE DE PAGINA*/
+.contacto{
+	width: 100%;
+	height: 350px;
+	background-color: var(--secundario);
+	position: relative;
+}
+.contacto .encabezado{
+	color: #fff;
+	padding-top: 20px
+}
+.contacto p{
+	text-align: center;
+	margin-bottom: 15px;
+	font-size: 18px;
+	color: #fff;
+}
+.contacto p i{
+	padding-right: 10px;
+	font-size: 25px
+}
+p.copy{
+	position: absolute;
+	width: 100%;
+	bottom: 5px;
+	font-size: 15px;
+}
+
+/*ESTILOS ANIMACION IMAGENES Y PARRAFOS*/
+.animadoArriba{
+	opacity: 0;
+	transition: .5s all;
+}
+.mostrarTop{
+	animation: mostrarTop 0.7s;
+}
+@keyframes mostrarTop{
+	0%{
+		transform: translateY(60px);
+	}
+	100%{
+		transform: translateX(0);
+	}
+}
+
+/*DISEÑO RESPONSIVE*/
+@media (max-width: 1000px){
+	.contenedor{
+		padding: 0 20px;
+	}
+}
+@media (max-width: 900px){
+	.textoBanner h3{
+		font-size: 30px;
+	}
+	.textoBanner p{
+		font-size: 25px;
+	}
+	.textoBanner h2{
+		font-size: 80px;
+		font-weight: 400
+	}
+	.logo{
+		padding: 20px;
+	}
+	.menu{
+	    width: 100%;
+	    height: 100vh;
+	    position: fixed;
+	    top:0;
+	    transition: all 1s;
+	    background: var(--secundario);
+	    display: flex;
+	    flex-direction: column;
+	    justify-content: center;
+	    align-items: center
+	}
+	.menu a{
+		margin-bottom: 15px;
+		font-size: 25px;
+		width: 150px;
+		height: 45px;
+	}
+	.esconder{
+		clip-path: circle(0% at 100% 0%);
+	}
+	.mostrar{
+		clip-path: circle(150% at 100% 0%);
+	}
+	.cambio .menu a{
+		color: #fff
+	}
+	.boton{
+		width: 40px;
+		height: 40px;
+		background-image: url('../img/menu.png');
+		margin-right: 20px;
+		background-size: 30px;
+		background-position: center;
+		background-repeat: no-repeat;
+		transition: .5s ease;
+		cursor: pointer;
+	}
+	.cambio .boton{
+		filter: invert(1);
+	}
+	.cambio .cerrarMenu{
+		filter: invert(0);
+		transition: .5s all;
+	}
+	.cerrarMenu{
+		background-image: url('../img/close.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 25px;
+        cursor: pointer;
+        z-index: 100;
+	}
+	.tarjeta{
+		font-size: 14px;
+		width: 45%
+	}
+}
+@media (max-width: 780px){
+	.textoBanner{
+		width: 400px;
+	}
+	.enlaces a{
+		width: 150px;
+		font-size: 15px;
+		padding: 6px
+	}
+	.textoNosotos{
+		font-size: 14px;
+	}
+}
+@media (max-width: 600px){
+	.logo a{
+		font-size: 15px
+	}
+	.textoBanner h3{
+		font-size: 23px
+	}
+	.textoBanner p{
+		font-size: 17px
+	}
+	.textoBanner h2{
+		font-size: 60px
+	}
+	.enlaces{
+		display: flex;
+		flex-direction: column;
+		align-items: center
+	}
+	.enlaces a{
+		margin-bottom: 15px
+	}
+	.contenidoNosotros .imagen{
+		width: 100%;
+		margin-bottom: 20px
+	}
+	.contenidoNosotros .textoNosotros{
+		width: 100%;
+	}
+	.nuestroMenu{
+		height: 770px
+	}
+	.nuestroMenu .imagenMenu{
+		width: 100%;
+		height: 250px
+	}
+	.nuestroMenu .imagenMenu img{
+		object-fit: cover;
+	}
+	.nuestroMenu .textoMenu{
+		width: 100%;
+	}
+	.nuestroMenu .textoMenu .tituloMenu{
+		font-size: 15px
+	}
+	.nuestroMenu .textoMenu li{
+		font-size: 13px
+	}
+	.nuestroMenu .textoMenu p{
+		font-size: 15px;
+	}
+	.especialidad{
+		margin-bottom: 40px
+	}
+	.especialidad .espimagen{
+		width: 100%;
+		margin-bottom: 20px
+	}
+	.especialidad .espimagen .derecha{
+		transform: translateY(-100%);
+	}
+	.especialidad .textoesp{
+		width: 90%
+	}
+	.desk{
+		display: none;
+	}
+	.phone{
+		display: block;
+	}
+	.nuestrosClientes{
+		height: 510px
+	}
+	.tarjeta{
+		width: 100%;
+		height: 150px;
+		margin-bottom: 15px
+	}
+}
+@media (max-width: 400px){
+	.menu a{
+		font-size: 15px;
+	}
+	.encabezado{
+		font-size: 28px;
+		width: 200px
+	}
+	.contenidoNosotros .textoNosotros p{
+		font-size: 14px
+	}
+	.nuestroMenu{
+		height: 1100px;
+	}
+	.contenidoMenu ul{
+		width: 100%;
+		text-align: center
+	}
+	.nuestroMenu .textoMenu .tituloMenu{
+		font-size: 20px
+	}
+	.nuestroMenu .textoMenu li{
+		font-size: 18px
+	}
+	.especialidad .textoesp p{
+		font-size: 16px
+	}
+	.nuestrosClientes{
+		height: 650px
+	}
+	.tarjeta{
+		width: 100%;
+		height: 230px;
+		margin-bottom: 15px
+	}
+	.copy{
+		font-size: 10px;
+	}
+}
